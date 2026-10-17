@@ -26,7 +26,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Το λογότυπο του Panellele και δύο οθόνες της εφαρμογής: μια κάρτα θεωρίας και μια ερώτηση Παρτίδας.">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="/assets/site.css?v=5e9e1d86">
+<link rel="stylesheet" href="/assets/site.css?v=b968a3b6">
 
 </head>
 <body class="">
@@ -34,9 +34,7 @@
 <header class="site-header">
   <div class="wrap header-row">
     <a class="brand" href="/" aria-label="Panellele, αρχική σελίδα">
-      <picture>
-        <img src="/assets/wordmark.png" alt="panellele" width="147" height="41">
-      </picture>
+      <img src="/assets/wordmark.png" alt="panellele" width="147" height="41">
     </a>
     <nav class="nav" aria-label="Κύριο μενού">
       <a href="/#efarmogi">Η εφαρμογή</a>
@@ -44,7 +42,18 @@
       <a href="/#poioi-eimaste">Ποιοι είμαστε</a>
       <a href="/support/" aria-current="page">Υποστήριξη</a>
     </nav>
-    <a class="button button-small" href="/#lipsi">Λήψη</a>
+    <a class="button button-small header-cta" href="/#lipsi">Λήψη</a>
+    <!-- Στο κινητό: το ίδιο μενού σε ένα <details>, χωρίς JavaScript. -->
+    <details class="menu">
+      <summary aria-label="Μενού"><span class="menu-icon" aria-hidden="true"></span></summary>
+      <nav class="menu-panel" aria-label="Μενού">
+        <a href="/#efarmogi">Η εφαρμογή</a>
+        <a href="/#mathimata">Μαθήματα</a>
+        <a href="/#poioi-eimaste">Ποιοι είμαστε</a>
+        <a href="/#erotiseis">Συχνές ερωτήσεις</a>
+        <a href="/support/">Υποστήριξη</a>
+      </nav>
+    </details>
   </div>
 </header>
 <main id="main">
@@ -53,7 +62,7 @@
     <p class="eyebrow">Υποστήριξη</p>
     <h1>Πώς μπορούμε να βοηθήσουμε;</h1>
     <p class="lead">Γράψε μας για οτιδήποτε: μια ερώτηση, ένα πρόβλημα στην εφαρμογή ή μια ιδέα. Θα σου απαντήσουμε το συντομότερο.</p>
-    <p><a class="button" href="mailto:support@panellele.com">support@panellele.com</a></p>
+    <div class="actions"><a class="button" href="mailto:support@panellele.com">Γράψε στο support@panellele.com</a></div>
   </div>
 </section>
 
@@ -92,9 +101,7 @@
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <picture>
-        <img src="/assets/wordmark.png" alt="panellele" width="126" height="35">
-      </picture>
+      <img src="/assets/wordmark.png" alt="panellele" width="126" height="35">
       <p>Παρτίδες ερωτήσεων, κάρτες θεωρίας και συγκέντρωση για τη Β΄ και τη Γ΄ Λυκείου.</p>
     </div>
     <nav class="footer-links" aria-label="Σύνδεσμοι">

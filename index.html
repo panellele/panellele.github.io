@@ -26,7 +26,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Το λογότυπο του Panellele και δύο οθόνες της εφαρμογής: μια κάρτα θεωρίας και μια ερώτηση Παρτίδας.">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="/assets/site.css?v=5e9e1d86">
+<link rel="stylesheet" href="/assets/site.css?v=b968a3b6">
 
 </head>
 <body class="">
@@ -34,9 +34,7 @@
 <header class="site-header">
   <div class="wrap header-row">
     <a class="brand" href="/" aria-label="Panellele, αρχική σελίδα">
-      <picture>
-        <img src="/assets/wordmark.png" alt="panellele" width="147" height="41">
-      </picture>
+      <img src="/assets/wordmark.png" alt="panellele" width="147" height="41">
     </a>
     <nav class="nav" aria-label="Κύριο μενού">
       <a href="/#efarmogi" aria-current="page">Η εφαρμογή</a>
@@ -44,7 +42,18 @@
       <a href="/#poioi-eimaste">Ποιοι είμαστε</a>
       <a href="/support/">Υποστήριξη</a>
     </nav>
-    <a class="button button-small" href="/#lipsi">Λήψη</a>
+    <a class="button button-small header-cta" href="/#lipsi">Λήψη</a>
+    <!-- Στο κινητό: το ίδιο μενού σε ένα <details>, χωρίς JavaScript. -->
+    <details class="menu">
+      <summary aria-label="Μενού"><span class="menu-icon" aria-hidden="true"></span></summary>
+      <nav class="menu-panel" aria-label="Μενού">
+        <a href="/#efarmogi">Η εφαρμογή</a>
+        <a href="/#mathimata">Μαθήματα</a>
+        <a href="/#poioi-eimaste">Ποιοι είμαστε</a>
+        <a href="/#erotiseis">Συχνές ερωτήσεις</a>
+        <a href="/support/">Υποστήριξη</a>
+      </nav>
+    </details>
   </div>
 </header>
 <main id="main">
@@ -54,31 +63,21 @@
       <p class="eyebrow">Για τη Β΄ και τη Γ΄ Λυκείου · Δωρεάν</p>
       <h1>Η θεωρία των Πανελληνίων, πιο απλή.</h1>
       <p class="lead">Παρτίδες ερωτήσεων με φίλους και άλλους μαθητές, κάρτες θεωρίας για την εξεταστέα ύλη και μια Λειτουργία Συγκέντρωσης που κρατά μακριά τις άλλες εφαρμογές όσο διαβάζεις.</p>
-      <div class="stores" id="lipsi">
-        <span class="store" aria-label="Σύντομα στο App Store">
-          <span class="store-small">Σύντομα στο</span>
-          <span class="store-big">App Store</span>
-        </span>
-        <span class="store store-later" aria-label="Αργότερα στο Google Play">
-          <span class="store-small">Αργότερα στο</span>
-          <span class="store-big">Google Play</span>
-        </span>
+      <div class="actions" id="lipsi">
+        <a class="button" href="mailto:support@panellele.com?subject=%CE%95%CE%BD%CE%B7%CE%BC%CE%AD%CF%81%CF%89%CF%83%CE%B7%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%BA%CF%85%CE%BA%CE%BB%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B1">Ειδοποίησέ με όταν βγει</a>
+        <a class="button button-secondary" href="#efarmogi">Πώς δουλεύει</a>
       </div>
-      <p class="hero-note">Θέλεις να μάθεις πότε βγαίνει; <a href="mailto:support@panellele.com?subject=%CE%95%CE%BD%CE%B7%CE%BC%CE%AD%CF%81%CF%89%CF%83%CE%B7%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%BA%CF%85%CE%BA%CE%BB%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B1">Γράψε μας</a> και θα σε ειδοποιήσουμε.</p>
+      <p class="availability">Σύντομα στο App Store, για iPhone με iOS 26 ή νεότερο. Αργότερα και στο Google Play.</p>
     </div>
-    <div class="hero-phones" aria-hidden="true">
-      <figure class="phone phone-back">
-        <img src="/assets/screens/card.jpg" alt="" width="552" height="1200">
-      </figure>
-      <figure class="phone phone-front">
-        <img src="/assets/screens/game.jpg" alt="" width="552" height="1200">
-      </figure>
+    <div class="hero-shots" aria-hidden="true">
+      <figure class="phone"><img src="/assets/screens/card.jpg" alt="" width="552" height="1200"></figure>
+      <figure class="phone phone-lower"><img src="/assets/screens/game.jpg" alt="" width="552" height="1200"></figure>
     </div>
   </div>
 </section>
 
 <section class="stats" aria-label="Το Panellele με αριθμούς">
-  <div class="wrap stats-grid">
+  <div class="wrap stats-row">
     <div class="stat"><strong>10</strong><span>μαθήματα της Γ΄ Λυκείου</span></div>
     <div class="stat"><strong>2.694</strong><span>κάρτες θεωρίας</span></div>
     <div class="stat"><strong>6.739</strong><span>ερωτήσεις για Παρτίδες</span></div>
@@ -99,12 +98,12 @@
         <h3>Παρτίδες σαν κουίζ</h3>
         <p>Ερωτήσεις Σωστό ή Λάθος, πολλαπλής επιλογής και αντιστοίχισης, με χρόνο για την καθεμία και τη σωστή απάντηση με εξήγηση αμέσως μετά.</p>
         <ul class="ticks">
-          <li><strong>Εξασκήσου</strong> στην ενότητα που θέλεις.</li>
+          <li><strong>Εξασκήσου</strong> σε μια ενότητα, ένα κεφάλαιο ή όλη την ύλη.</li>
           <li><strong>Προκάλεσε τους φίλους σου</strong> σε μια Παρτίδα έως 6 παικτών.</li>
           <li><strong>Προκάλεσε αντιπάλους</strong> από όλη την Ελλάδα, με κοντινό Elo και την ίδια ύλη με σένα.</li>
         </ul>
       </div>
-      <figure class="phone"><img src="/assets/screens/game.jpg" alt="Ερώτηση πολλαπλής επιλογής σε μια Παρτίδα Βιολογίας, με χρόνο 30 δευτερολέπτων και τέσσερις απαντήσεις." width="552" height="1200" loading="lazy"></figure>
+      <figure class="shot"><div class="phone"><img src="/assets/screens/game.jpg" alt="Ερώτηση πολλαπλής επιλογής σε μια Παρτίδα Βιολογίας, με χρόνο 30 δευτερολέπτων και τέσσερις απαντήσεις." width="552" height="1200" loading="lazy"></div></figure>
     </article>
 
     <article class="feature feature-flip">
@@ -112,11 +111,11 @@
         <h3>Όλη η θεωρία, σε κάρτες</h3>
         <p>Μπροστά μια ερώτηση, πίσω η θεωρία: ορισμοί, θεωρήματα, νόμοι, μέθοδοι λύσης και σχήματα, με τη σειρά της επίσημης ύλης. Σκέφτεσαι την απάντηση, γυρίζεις την κάρτα και βλέπεις αν την ήξερες.</p>
         <ul class="ticks">
-          <li>Τα ίδια χρώματα σε κάθε μάθημα: <span class="tag tag-blue">θεωρία</span>, <span class="tag tag-orange">προσοχή</span>, <span class="tag tag-gray">σχόλιο</span>.</li>
+          <li>Τα ίδια χρώματα σε κάθε μάθημα: <span class="tag tag-blue">θεωρία</span> <span class="tag tag-orange">προσοχή</span> <span class="tag tag-gray">σχόλιο</span></li>
           <li>Κράτα τις δύσκολες στα αγαπημένα ή διάβασέ τες όλες σε τυχαία σειρά.</li>
         </ul>
       </div>
-      <figure class="phone"><img src="/assets/screens/card.jpg" alt="Η πίσω όψη μιας κάρτας Φυσικής με τον ορισμό της ελαστικής κρούσης." width="552" height="1200" loading="lazy"></figure>
+      <figure class="shot"><div class="phone"><img src="/assets/screens/card.jpg" alt="Η πίσω όψη μιας κάρτας Φυσικής με τον ορισμό της ελαστικής κρούσης." width="552" height="1200" loading="lazy"></div></figure>
     </article>
 
     <article class="feature">
@@ -128,7 +127,7 @@
           <li>Βλέπεις πόση ώρα συγκεντρώθηκες κάθε μέρα της εβδομάδας.</li>
         </ul>
       </div>
-      <figure class="phone"><img src="/assets/screens/focus.jpg" alt="Μια συνεδρία συγκέντρωσης σε εξέλιξη, με 59 λεπτά που απομένουν." width="552" height="1200" loading="lazy"></figure>
+      <figure class="shot"><div class="phone"><img src="/assets/screens/focus.jpg" alt="Μια συνεδρία συγκέντρωσης σε εξέλιξη, με 59 λεπτά που απομένουν." width="552" height="1200" loading="lazy"></div></figure>
     </article>
 
     <article class="feature feature-flip">
@@ -140,12 +139,12 @@
           <li>Στην Εθνική Κατάταξη βλέπεις όλους τους μαθητές ή μόνο όσους είναι στην τάξη σου.</li>
         </ul>
       </div>
-      <figure class="phone"><img src="/assets/screens/ranking.jpg" alt="Η Εθνική Κατάταξη με βάθρο για τους τρεις πρώτους μαθητές." width="552" height="1200" loading="lazy"></figure>
+      <figure class="shot"><div class="phone"><img src="/assets/screens/ranking.jpg" alt="Η Εθνική Κατάταξη με βάθρο για τους τρεις πρώτους μαθητές." width="552" height="1200" loading="lazy"></div></figure>
     </article>
   </div>
 </section>
 
-<section class="section section-tint" id="mathimata">
+<section class="section section-soft" id="mathimata">
   <div class="wrap">
     <header class="section-head">
       <p class="eyebrow">Μαθήματα</p>
@@ -155,52 +154,52 @@
     <ul class="subjects">
       <li class="subject">
         <h3>Έκθεση</h3>
-        <p>61 κάρτες · 302 ερωτήσεις</p>
+        <p>61&nbsp;κάρτες · 302&nbsp;ερωτήσεις</p>
         <span class="field">Όλα τα Πεδία</span>
       </li>
       <li class="subject">
         <h3>Αρχαία Ελληνικά</h3>
-        <p>451 κάρτες · 701 ερωτήσεις</p>
+        <p>451&nbsp;κάρτες · 701&nbsp;ερωτήσεις</p>
         <span class="field">1ο Πεδίο</span>
       </li>
       <li class="subject">
         <h3>Λατινικά</h3>
-        <p>472 κάρτες · 939 ερωτήσεις</p>
+        <p>472&nbsp;κάρτες · 939&nbsp;ερωτήσεις</p>
         <span class="field">1ο Πεδίο</span>
       </li>
       <li class="subject">
         <h3>Ιστορία</h3>
-        <p>301 κάρτες · 1.024 ερωτήσεις</p>
+        <p>301&nbsp;κάρτες · 1.024&nbsp;ερωτήσεις</p>
         <span class="field">1ο Πεδίο</span>
       </li>
       <li class="subject">
         <h3>Μαθηματικά</h3>
-        <p>182 κάρτες · 362 ερωτήσεις</p>
+        <p>182&nbsp;κάρτες · 362&nbsp;ερωτήσεις</p>
         <span class="field">2ο και 4ο Πεδίο</span>
       </li>
       <li class="subject">
         <h3>Φυσική</h3>
-        <p>248 κάρτες · 605 ερωτήσεις</p>
+        <p>248&nbsp;κάρτες · 605&nbsp;ερωτήσεις</p>
         <span class="field">2ο και 3ο Πεδίο</span>
       </li>
       <li class="subject">
         <h3>Χημεία</h3>
-        <p>195 κάρτες · 538 ερωτήσεις</p>
+        <p>195&nbsp;κάρτες · 538&nbsp;ερωτήσεις</p>
         <span class="field">2ο και 3ο Πεδίο</span>
       </li>
       <li class="subject">
         <h3>Βιολογία</h3>
-        <p>264 κάρτες · 1.070 ερωτήσεις</p>
+        <p>264&nbsp;κάρτες · 1.070&nbsp;ερωτήσεις</p>
         <span class="field">3ο Πεδίο</span>
       </li>
       <li class="subject">
         <h3>Οικονομία</h3>
-        <p>213 κάρτες · 547 ερωτήσεις</p>
+        <p>213&nbsp;κάρτες · 547&nbsp;ερωτήσεις</p>
         <span class="field">4ο Πεδίο</span>
       </li>
       <li class="subject">
         <h3>Πληροφορική</h3>
-        <p>307 κάρτες · 651 ερωτήσεις</p>
+        <p>307&nbsp;κάρτες · 651&nbsp;ερωτήσεις</p>
         <span class="field">4ο Πεδίο</span>
       </li>
     </ul>
@@ -213,45 +212,45 @@
       <p class="eyebrow">Ασφάλεια και απόρρητο</p>
       <h2>Φτιαγμένο για μαθητές, με σεβασμό.</h2>
     </header>
-    <ul class="trust">
+    <ul class="points">
       <li>
-        <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></span>
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg>
         <h3>Χωρίς διαφημίσεις</h3>
         <p>Τίποτα δεν διακόπτει τη μελέτη σου, και δεν σε παρακολουθούμε σε άλλες εφαρμογές.</p>
       </li>
       <li>
-        <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
         <h3>Δεν πουλάμε δεδομένα</h3>
         <p>Δεν πουλάμε και δεν δίνουμε τα δεδομένα σου σε κανέναν. Κρατάμε μόνο ό,τι χρειάζεται για να λειτουργεί η εφαρμογή, σε servers στην Ευρωπαϊκή Ένωση.</p>
       </li>
       <li>
-        <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></svg></span>
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></svg>
         <h3>Τα προσωπικά, μόνο για φίλους</h3>
         <p>Όσοι δεν είναι φίλοι σου βλέπουν μόνο το όνομά σου με το αρχικό του επωνύμου (π.χ. «Μαρία Π.»), το όνομα χρήστη, τη φωτογραφία, την τάξη, το Πεδίο και το Elo σου.</p>
       </li>
       <li>
-        <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5c0-4 3.4-6.5 7.5-6.5s7.5 2.5 7.5 6.5"/></svg></span>
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5c0-4 3.4-6.5 7.5-6.5s7.5 2.5 7.5 6.5"/></svg>
         <h3>Ο λογαριασμός είναι δικός σου</h3>
-        <p>Αποκλείεις όποιον σε ενοχλεί, και διαγράφεις τον λογαριασμό σου όποτε θέλεις, μέσα από την εφαρμογή.</p>
+        <p>Αποκλείεις ή αναφέρεις όποιον σε ενοχλεί, και διαγράφεις τον λογαριασμό σου όποτε θέλεις, μέσα από την εφαρμογή.</p>
       </li>
     </ul>
-    <p class="center"><a class="link-arrow" href="/privacy/">Διάβασε την Πολιτική Απορρήτου</a></p>
+    <p><a class="link-arrow" href="/privacy/">Διάβασε την Πολιτική Απορρήτου</a></p>
   </div>
 </section>
 
-<section class="section section-tint" id="poioi-eimaste">
+<section class="section section-soft" id="poioi-eimaste">
   <div class="wrap about">
     <div>
       <p class="eyebrow">Ποιοι είμαστε</p>
       <h2>Γιατί φτιάξαμε το Panellele.</h2>
       <p>Το Panellele γεννήθηκε από την εμπειρία των Πανελληνίων και φτιάχνεται στην Ελλάδα. Ξέρουμε πόση θεωρία έχεις να μάθεις, πόσο εύκολα σε αποσπά το κινητό και πόσο βοηθά να διαβάζεις παρέα με άλλους. Γι' αυτό έχει Παρτίδες, κάρτες και Λειτουργία Συγκέντρωσης.</p>
-      <p><strong>Ο στόχος μας</strong> είναι να γίνει η μελέτη πιο απλή και λιγότερο μοναχική, με μια εφαρμογή που κάθε μαθητής μπορεί να έχει δωρεάν.</p>
+      <p>Ο στόχος μας είναι να γίνει η μελέτη πιο απλή και λιγότερο μοναχική, με μια εφαρμογή που κάθε μαθητής μπορεί να έχει δωρεάν.</p>
     </div>
-    <ul class="values">
-      <li><h3>Ακρίβεια</h3><p>Κάθε ερώτηση και κάθε κάρτα ελέγχεται με τα σχολικά βιβλία και την εξεταστέα ύλη. Αν βρεις λάθος, το διορθώνουμε.</p></li>
-      <li><h3>Χωρίς πίεση</h3><p>Δεν υποσχόμαστε μόρια και δεν παίζουμε με το άγχος σου. Διαβάζεις με τον δικό σου ρυθμό.</p></li>
-      <li><h3>Ιδιωτικότητα</h3><p>Κρατάμε τα δεδομένα σου μόνο για να λειτουργεί η εφαρμογή. Δεν τα πουλάμε και δεν βάζουμε διαφημίσεις.</p></li>
-    </ul>
+    <dl class="values">
+      <div><dt>Ακρίβεια</dt><dd>Κάθε ερώτηση και κάθε κάρτα ελέγχεται με τα σχολικά βιβλία και την εξεταστέα ύλη. Αν βρεις λάθος, το διορθώνουμε.</dd></div>
+      <div><dt>Χωρίς πίεση</dt><dd>Δεν υποσχόμαστε μόρια και δεν παίζουμε με το άγχος σου. Διαβάζεις με τον δικό σου ρυθμό.</dd></div>
+      <div><dt>Ιδιωτικότητα</dt><dd>Κρατάμε τα δεδομένα σου μόνο για να λειτουργεί η εφαρμογή. Δεν τα πουλάμε και δεν βάζουμε διαφημίσεις.</dd></div>
+    </dl>
   </div>
 </section>
 
@@ -298,24 +297,20 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="wrap">
-    <div class="cta">
-      <img class="cta-hat" src="/assets/hat.svg" alt="" width="64" height="48">
-      <h2>Σύντομα στο iPhone σου.</h2>
-      <p>Θέλεις να το μάθεις μόλις κυκλοφορήσει;</p>
-      <a class="button" href="mailto:support@panellele.com?subject=%CE%95%CE%BD%CE%B7%CE%BC%CE%AD%CF%81%CF%89%CF%83%CE%B7%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%BA%CF%85%CE%BA%CE%BB%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B1">Ειδοποίησέ με</a>
-      <p class="muted small">Κρατάμε το email σου μόνο για να σου πούμε ότι βγήκε, και μετά το σβήνουμε.</p>
-    </div>
+<section class="cta">
+  <div class="wrap narrow">
+    <img class="cta-hat" src="/assets/hat.svg" alt="" width="44" height="33">
+    <h2>Σύντομα στο iPhone σου.</h2>
+    <p>Θέλεις να το μάθεις μόλις κυκλοφορήσει;</p>
+    <a class="button" href="mailto:support@panellele.com?subject=%CE%95%CE%BD%CE%B7%CE%BC%CE%AD%CF%81%CF%89%CF%83%CE%B7%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%B7%CE%BD%20%CE%BA%CF%85%CE%BA%CE%BB%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B1">Ειδοποίησέ με</a>
+    <p class="fine">Κρατάμε το email σου μόνο για να σου πούμε ότι βγήκε, και μετά το σβήνουμε.</p>
   </div>
 </section>
 </main>
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <picture>
-        <img src="/assets/wordmark.png" alt="panellele" width="126" height="35">
-      </picture>
+      <img src="/assets/wordmark.png" alt="panellele" width="126" height="35">
       <p>Παρτίδες ερωτήσεων, κάρτες θεωρίας και συγκέντρωση για τη Β΄ και τη Γ΄ Λυκείου.</p>
     </div>
     <nav class="footer-links" aria-label="Σύνδεσμοι">
