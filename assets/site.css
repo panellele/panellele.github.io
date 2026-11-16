@@ -244,6 +244,8 @@ strong { font-weight: 600; }
 .help-card p { color: var(--text-2); }
 .help-card p strong { color: var(--text); }
 .help-card p:last-child { margin-bottom: 0; }
+.help-card ul { color: var(--text-2); padding-left: 1.3em; margin: 0 0 1em; }
+.help-card li { margin: 0.25em 0; }
 
 .legal h1 { font-size: clamp(1.875rem, 3.2vw, 2.375rem); }
 .legal h2 { font-size: 1.1875rem; letter-spacing: -0.01em; margin-top: 2.2em; scroll-margin-top: 80px; }
